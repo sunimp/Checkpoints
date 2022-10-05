@@ -22,7 +22,7 @@ let package = Package(
                 .product(name: "HsExtensions", package: "HsExtensions.Swift"),
             ],
             resources: [
-                .copy("Resources")
+                .copy("Assets")
             ]),
         .testTarget(
             name: "CheckpointTests",

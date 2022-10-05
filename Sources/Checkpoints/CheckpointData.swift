@@ -6,8 +6,9 @@ public class CheckpointData {
     public let additionalBlocks: [Data]
 
     public init(blockchain: Blockchain, network: Network, blockType: BlockType) throws {
-        let path = [network.rawValue, blockType.rawValue].joined(separator: "-")
-        guard let checkpoint = Bundle.module.url(forResource: path, withExtension: "checkpoint", subdirectory: blockchain.rawValue) else {
+        let resourcePath = [network.rawValue, blockType.rawValue].joined(separator: "-")
+        let subdirectory = ["Assets", blockchain.rawValue].joined(separator: "/")
+        guard let checkpoint = Bundle.module.url(forResource: resourcePath, withExtension: "checkpoint", subdirectory: subdirectory) else {
             throw ParseError.invalidUrl
         }
 
