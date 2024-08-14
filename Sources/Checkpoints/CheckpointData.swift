@@ -1,5 +1,5 @@
 import Foundation
-import HsExtensions
+import WWExtensions
 
 public class CheckpointData {
     public let block: Data
@@ -19,14 +19,14 @@ public class CheckpointData {
             throw ParseError.invalidFile
         }
 
-        guard let block = lines.removeFirst().hs.hexData else {
+        guard let block = lines.removeFirst().ww.hexData else {
             throw ParseError.invalidFile
         }
         self.block = block
 
         var additionalBlocks = [Data]()
         for line in lines {
-            guard let additionalData = line.hs.hexData else {
+            guard let additionalData = line.ww.hexData else {
                 throw ParseError.invalidFile
             }
             additionalBlocks.append(additionalData)

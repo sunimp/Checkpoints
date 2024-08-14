@@ -1,16 +1,15 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "HsExtensions.Swift",
-        "repositoryURL": "https://github.com/horizontalsystems/HsExtensions.Swift.git",
-        "state": {
-          "branch": null,
-          "revision": "360db9624dcf720452ccf11c421cd0fb4f5be6b2",
-          "version": "1.0.3"
-        }
+  "originHash" : "7e79f11bfd38e7facc7ba3e209a206abc571824bd441c81f9f2c8c876c5c4426",
+  "pins" : [
+    {
+      "identity" : "wwextensions.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sunimp/WWExtensions.Swift.git",
+      "state" : {
+        "revision" : "8611f6781f2073d40897f4475f25b05cb58c31fa",
+        "version" : "1.0.7"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 3
 }

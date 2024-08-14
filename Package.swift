@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.10
 
 import PackageDescription
 
@@ -13,13 +13,13 @@ let package = Package(
             targets: ["Checkpoints"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/horizontalsystems/HsExtensions.Swift.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/sunimp/WWExtensions.Swift.git", .upToNextMajor(from: "1.0.7")),
     ],
     targets: [
         .target(
             name: "Checkpoints",
             dependencies: [
-                .product(name: "HsExtensions", package: "HsExtensions.Swift"),
+                .product(name: "WWExtensions", package: "WWExtensions.Swift"),
             ],
             resources: [
                 .copy("Assets")
@@ -28,7 +28,7 @@ let package = Package(
             name: "CheckpointTests",
             dependencies: [
                 "Checkpoints",
-                .product(name: "HsExtensions", package: "HsExtensions.Swift"),
+                .product(name: "WWExtensions", package: "WWExtensions.Swift"),
             ]),
     ]
 )
