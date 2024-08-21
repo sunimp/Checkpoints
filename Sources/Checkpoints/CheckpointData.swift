@@ -1,7 +1,16 @@
+//
+//  CheckpointData.swift
+//  Checkpoints
+//
+//  Created by Sun on 2024/8/21.
+//
+
 import Foundation
+
 import WWExtensions
 
 public class CheckpointData {
+    
     public let block: Data
     public let additionalBlocks: [Data]
 
@@ -36,9 +45,9 @@ public class CheckpointData {
 
 }
 
-public extension CheckpointData {
+extension CheckpointData {
 
-    enum Blockchain: String {
+    public enum Blockchain: String {
         case bitcoin = "Bitcoin"
         case bitcoinCash = "BitcoinCash"
         case dash = "Dash"
@@ -46,19 +55,18 @@ public extension CheckpointData {
         case eCash = "ECash"
     }
 
-    enum Network: String {
+    public enum Network: String {
         case main = "MainNet"
         case test = "TestNet"
     }
 
-    enum BlockType: String {
+    public enum BlockType: String {
         case bip44 = "bip44"
         case last = "last"
     }
 
-    enum ParseError: Error {
+    public enum ParseError: Error {
         case invalidUrl
         case invalidFile
     }
-
 }
