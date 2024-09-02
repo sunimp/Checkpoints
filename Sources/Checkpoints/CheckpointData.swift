@@ -1,8 +1,7 @@
 //
 //  CheckpointData.swift
-//  Checkpoints
 //
-//  Created by Sun on 2024/8/21.
+//  Created by Sun on 2022/10/5.
 //
 
 import Foundation
@@ -12,9 +11,12 @@ import WWExtensions
 // MARK: - CheckpointData
 
 public class CheckpointData {
-    
+    // MARK: Properties
+
     public let block: Data
     public let additionalBlocks: [Data]
+
+    // MARK: Lifecycle
 
     public init(blockchain: Blockchain, network: Network, blockType: BlockType) throws {
         let resourcePath = [network.rawValue, blockType.rawValue].joined(separator: "-")
@@ -50,11 +52,9 @@ public class CheckpointData {
         }
         self.additionalBlocks = additionalBlocks
     }
-
 }
 
 extension CheckpointData {
-
     public enum Blockchain: String {
         case bitcoin = "Bitcoin"
         case bitcoinCash = "BitcoinCash"

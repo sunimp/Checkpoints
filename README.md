@@ -2,6 +2,12 @@
 
 Checkpoints for bitcoin-based blockchains. Bitcoin, Dash, Litecoin, BitcoinCash
 
+## Requirements
+
+* Xcode 15.4+
+* Swift 5.10+
+* iOS 14.0+
+
 ## Installation
 
 ### Swift Package Manager
@@ -15,7 +21,7 @@ the `dependencies` value of your `Package.swift`.
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/sunimp/Checkpoints.git", .upToNextMajor(from: "1.1.1"))
+    .package(url: "https://github.com/sunimp/Checkpoints.git", .upToNextMajor(from: "1.2.0"))
 ]
 ```
 ## Usage

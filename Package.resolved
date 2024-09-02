@@ -1,5 +1,5 @@
 {
-  "originHash" : "b8df8d97d6651a52cec131b4deba79ac516bf0d7011712f04af8b85e267bbe2a",
+  "originHash" : "c29e80a784d39abc4b1785672ad185df835d204d137f7c1c673826b8255ad868",
   "pins" : [
     {
       "identity" : "swiftformat",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sunimp/WWExtensions.Swift.git",
       "state" : {
-        "revision" : "2f6da74db952fb55963ca7a7996b629fd98aef1f",
-        "version" : "1.1.1"
+        "revision" : "c231cee4cc91b3ce8d3da538ae11a38575a449e7",
+        "version" : "1.2.0"
       }
     }
   ],

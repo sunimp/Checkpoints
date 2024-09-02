@@ -1,9 +1,14 @@
+//
+//  TestParseData.swift
+//
+//  Created by Sun on 2022/10/5.
+//
+
+@testable import Checkpoints
 import WWExtensions
 import XCTest
-@testable import Checkpoints
 
 final class TestParseData: XCTestCase {
-
     func testBitcoinMainBip44() throws {
         let bitcoinBip44 =
             "02000000ba3f2b4208ec0495b2e3743465cae2b44d8f1c778b44cf6b0000000000000000d287e52e8045c060c1cee47d1cc7559c7b8ab8db580539fb55fc579a998ea14efe0e50538c9d001926c0c180a08504003f72e59e0db5b38e5210369dc2fb4831ab1e81f3b5dbec3d0000000000000000"
@@ -23,5 +28,4 @@ final class TestParseData: XCTestCase {
         XCTAssertEqual(dashAddBlock0, checkpoints.additionalBlocks[0].ww.hex)
         XCTAssertEqual(dashAddBlock1, checkpoints.additionalBlocks[1].ww.hex)
     }
-
 }
