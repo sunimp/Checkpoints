@@ -1,12 +1,13 @@
 //
 //  CheckpointData.swift
+//  CheckpointData
 //
 //  Created by Sun on 2022/10/5.
 //
 
 import Foundation
 
-import WWExtensions
+import SWExtensions
 
 // MARK: - CheckpointData
 
@@ -38,14 +39,14 @@ public class CheckpointData {
             throw ParseError.invalidFile
         }
 
-        guard let block = lines.removeFirst().ww.hexData else {
+        guard let block = lines.removeFirst().sw.hexData else {
             throw ParseError.invalidFile
         }
         self.block = block
 
         var additionalBlocks = [Data]()
         for line in lines {
-            guard let additionalData = line.ww.hexData else {
+            guard let additionalData = line.sw.hexData else {
                 throw ParseError.invalidFile
             }
             additionalBlocks.append(additionalData)

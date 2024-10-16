@@ -13,14 +13,14 @@ let package = Package(
             targets: ["Checkpoints"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/sunimp/WWExtensions.Swift.git", .upToNextMajor(from: "1.2.0")),
-        .package(url: "https://github.com/nicklockwood/SwiftFormat.git", from: "0.54.3"),
+        .package(url: "https://github.com/sunimp/SWExtensions.git", .upToNextMajor(from: "1.0.0")),
+        .package(url: "https://github.com/nicklockwood/SwiftFormat.git", from: "0.54.6"),
     ],
     targets: [
         .target(
             name: "Checkpoints",
             dependencies: [
-                .product(name: "WWExtensions", package: "WWExtensions.Swift"),
+                "SWExtensions"
             ],
             resources: [
                 .copy("Assets")
@@ -29,7 +29,7 @@ let package = Package(
             name: "CheckpointTests",
             dependencies: [
                 "Checkpoints",
-                .product(name: "WWExtensions", package: "WWExtensions.Swift"),
+                "SWExtensions"
             ]),
     ]
 )
